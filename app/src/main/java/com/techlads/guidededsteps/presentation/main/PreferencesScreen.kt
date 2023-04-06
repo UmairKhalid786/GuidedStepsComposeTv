@@ -6,7 +6,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.techlads.guidededsteps.presentation.main.detail.PreferenceDetail
@@ -29,7 +28,7 @@ fun Heading() {
     Text(
         "Preferences",
         Modifier.padding(16.dp),
-        style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.ExtraBold)
+        style = MaterialTheme.typography.headlineMedium
     )
 }
 
