@@ -3,6 +3,7 @@ package com.techlads.guidededsteps.presentation.main.list
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -17,11 +18,17 @@ import com.techlads.guidededsteps.presentation.main.Heading
 
 @Composable
 fun PreferencesList(modifier: Modifier, navController: NavHostController) {
+
+    val data = remember {
+        PreferencesData.data
+    }
+
     Box(
         modifier
             .fillMaxHeight()
             .background(Color.DarkGray.copy(alpha = 0.6f)), contentAlignment = Alignment.Center
     ) {
+
         TvLazyColumn(
             Modifier
                 .wrapContentHeight()
@@ -29,10 +36,11 @@ fun PreferencesList(modifier: Modifier, navController: NavHostController) {
                 .padding(bottom = 120.dp)
                 .padding(horizontal = 24.dp)
         ) {
+
             item {
                 Heading()
             }
-            items(PreferencesData.data) {
+            items(data) {
                 PreferenceItem(it) {
                     navController.navigate(it.screen)
                 }
