@@ -6,7 +6,7 @@ object PreferencesData {
             Preference.PROFILE,
             Preference.PERMISSIONS,
             Preference.ABOUT,
-            Preference.LOGOUT,
+            Preference.DELETE_ACCOUNT,
         )
     }
 }
