@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.techlads.guidededsteps.presentation.preferences.about.AboutScreen
-import com.techlads.guidededsteps.presentation.preferences.logout.LogoutScreen
+import com.techlads.guidededsteps.presentation.preferences.deleteAccount.DeleteAccountScreen
 import com.techlads.guidededsteps.presentation.preferences.permissions.PermissionsScreen
 import com.techlads.guidededsteps.presentation.preferences.profiles.ProfileScreen
 
@@ -27,7 +27,7 @@ fun PreferencesNavigation(navController: NavHostController) {
         }
         composable(
             Preferences.Logout.title) {
-            LogoutScreen()
+            DeleteAccountScreen()
         }
     }
 }
