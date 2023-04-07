@@ -19,7 +19,7 @@ fun DeleteAccountScreen() {
     PreferencesContainer(preference = Preference.DELETE_ACCOUNT) {
         Column {
 
-            Text("Are you sure you want to delete your account ?", color = Color.Red)
+            Text("Are you sure you want to delete your account ?", color = Color.Red.copy(0.7f))
             Spacer(modifier = Modifier.size(24.dp))
             Row {
                 Button(text = "Delete") {

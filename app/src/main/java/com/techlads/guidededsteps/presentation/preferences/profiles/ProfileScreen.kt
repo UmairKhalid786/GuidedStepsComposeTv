@@ -1,11 +1,14 @@
 package com.techlads.guidededsteps.presentation.preferences.profiles
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.LocalContentColor
@@ -25,15 +28,33 @@ fun ProfileScreen() {
 
 @Composable
 fun ProfilesContent() {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Image(
-            modifier = Modifier.size(100.dp),
-            colorFilter = ColorFilter.tint(LocalContentColor.current),
-            painter = painterResource(id = R.drawable.ic_profile),
-            contentDescription = "User profile"
-        )
-        Spacer(modifier = Modifier.size(20.dp))
-        UserDetails()
+    Column {
+
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .clip(CircleShape)
+                    .shadow(elevation = 12.dp, shape = CircleShape, clip = true)
+                    .border(2.dp, LocalContentColor.current, CircleShape),
+                painter = painterResource(id = R.drawable.profile),
+                contentDescription = "User profile"
+            )
+            Spacer(modifier = Modifier.size(20.dp))
+            UserDetails()
+        }
+        Spacer(modifier = Modifier.size(5.dp))
+        Row {
+            Spacer(modifier = Modifier.size(120.dp))
+            Button(text = "Save") {
+
+            }
+            Spacer(modifier = Modifier.size(8.dp))
+            Button(text = "Cancel") {
+
+            }
+        }
     }
 }
 
@@ -51,16 +72,6 @@ fun UserDetails() {
             style = MaterialTheme.typography.labelSmall,
             color = LocalContentColor.current.copy(alpha = 0.4f)
         )
-        Spacer(modifier = Modifier.size(20.dp))
-        Row {
-            Button(text = "Save") {
-
-            }
-            Spacer(modifier = Modifier.size(8.dp))
-            Button(text = "Cancel") {
-
-            }
-        }
     }
 }
 
