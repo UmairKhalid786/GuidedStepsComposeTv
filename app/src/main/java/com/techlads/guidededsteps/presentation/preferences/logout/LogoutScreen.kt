@@ -1,12 +1,14 @@
-package com.techlads.guidededsteps.presentation.preferences
+package com.techlads.guidededsteps.presentation.preferences.logout
 
-import androidx.compose.material3.Text
+import androidx.tv.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.techlads.guidededsteps.presentation.data.Preference
+import com.techlads.guidededsteps.presentation.preferences.PreferencesContainer
 
 @Composable
 fun LogoutScreen() {
-    PreferencesContainer {
+    PreferencesContainer(preference = Preference.LOGOUT) {
         Text("Logout")
     }
 }

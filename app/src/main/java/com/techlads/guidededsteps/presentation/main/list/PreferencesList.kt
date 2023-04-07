@@ -28,7 +28,6 @@ fun PreferencesList(modifier: Modifier, navController: NavHostController) {
             .fillMaxHeight()
             .background(Color.DarkGray.copy(alpha = 0.6f)), contentAlignment = Alignment.Center
     ) {
-
         TvLazyColumn(
             Modifier
                 .wrapContentHeight()
@@ -36,7 +35,6 @@ fun PreferencesList(modifier: Modifier, navController: NavHostController) {
                 .padding(bottom = 120.dp)
                 .padding(horizontal = 24.dp)
         ) {
-
             item {
                 Heading()
             }
