@@ -14,5 +14,4 @@ Guided Fragment replacement is not available yet in compose tv, so its an effort
 ![Screenshot_20230407_044438](https://user-images.githubusercontent.com/21205138/230531139-cab3a27c-9974-4eb9-9651-25467a5b0699.png)
 
 ## Video sample
-
 [final.webm](https://user-images.githubusercontent.com/21205138/230531839-281a8682-bfab-445f-a58e-e71a763dd7af.webm)
